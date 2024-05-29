@@ -3,7 +3,8 @@ const express=require("express");
 const app=express();
 const jwt=require("jsonwebtoken")
 app.use(express.json());
-
+const cors=require("cors")
+app.use(cors())
 const { userSignup, userSignin, createTodo, updateTodo } = require("./types");
 const { todo, user } = require("./db");
 const jwtPassword = "gauravpadda"
